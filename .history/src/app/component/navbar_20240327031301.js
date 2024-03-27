@@ -54,7 +54,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`md:w-[800px] fixed top-0 right-0 left-0 z-40 px-3 rounded-b-2xl pb-3  mx-auto pt-10 ${scrolled ? 'bg-gray-900 shadow-xl px-3 rounded-b-2xl pb-3 backdrop-blur-xl bg-white/30' : 'bg-transparent'}`}>
+        <div className={`md:w-[800px] fixed top-0 right-0 left-0  px-3 rounded-b-2xl pb-3  mx-auto pt-10 ${scrolled ? 'bg-gray-900 shadow-xl px-3 rounded-b-2xl pb-3 backdrop-blur-xl bg-white/30' : 'bg-transparent'}`}>
             <div className='flex items-center justify-between gap-3'>
                 <div className='border-[#2D8CFF] bg-white w-full border-2 md:block hidden rounded-2xl py-4'>
                     <ul className='list-none poppins-semibold text-md px-10 flex items-center justify-between'>
