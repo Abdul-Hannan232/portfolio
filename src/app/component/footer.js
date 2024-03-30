@@ -9,7 +9,7 @@ import Image from "next/image"
 const Footer = () => {
     return (
         <div className='relative mt-60    bg-black'>
-            <div className='bg-[#000000] absolute md:-top-12 -top-20 right-0 left-0  md:w-[800px] text-white md:mx-auto mx-10 p-5 rounded-xl md:flex justify-between items-center border-[#FFFFFF] border-2'>
+            <div className='bg-[#000000] absolute md:-top-12 -top-20 right-0 left-0  md:w-[780px] text-white md:mx-auto mx-10 p-5 rounded-xl md:flex justify-between items-center border-[#FFFFFF] border-2'>
                 <div>
                     <h1 className='md:text-xl text-md font-semibold'>FREE CONSULTANCY</h1>
                     <p className='text-[12px] poppins-light md:mb-0 mb-5'>30 minutes free consultancy call</p>

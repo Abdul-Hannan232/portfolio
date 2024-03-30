@@ -4,7 +4,7 @@ import { RiArrowLeftSLine } from 'react-icons/ri';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import testimonaldata from '../data/testimonaldata.json';
 import Image from 'next/image';
-
+import {motion} from "framer-motion"
 const Testimonial = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -18,9 +18,9 @@ const Testimonial = () => {
  
 
     return (
-        <div className="md:w-[670px] md:mx-auto mx-5 mt-60" id="Testimonials">
-            <h1 className="md:text-5xl text-3xl poppins-bold text-center mt-44 mb-8">Testimonials</h1>
-            <div className="flex items-center md:gap-5 gap-3">
+        <motion.div whileInView={{ y: 0 }} initial={{ y: 100 }} transition={{ delay: 0.2, duration: 1 }}  className="md:w-[670px] md:mx-auto mx-2 pt-56" id="Testimonials">
+            <h1 className="md:text-5xl text-3xl poppins-bold text-center mb-8">Testimonials</h1>
+            <div className="flex items-center md:gap-5 gap-2">
                 <div className="bg-[#E8F2FF] md:h-44 h-32 md:rounded-xl rounded-lg flex flex-col justify-center md:px-4 px-2 items-center">
                     <div className="bg-[#2D8CFF] text-white text-xl md:p-[1px] cursor-pointer md:w-6 w-5 text-center font-bold  rounded-md"  onClick={goToPrev}>
                         <RiArrowLeftSLine />
@@ -30,7 +30,7 @@ const Testimonial = () => {
                 {testimonaldata.map((item, index) => (
                     <div key={index}  className={`border-[#CACACA] border-2 rounded-2xl p-4 bg-white ${index !== currentIndex && 'hidden'}`}>
                         <div className="bg-[#2D8CFF] text-white flex items-center md:p-3     p-2 rounded-2xl  gap-3">
-                            <div className="bg-[#FFFFFF] p-4 rounded-full md:w-14 w-10 h-10 md:h-14">
+                            <div className="bg-[#FFFFFF] md:p-4 p-2 rounded-full md:w-14 w-10 h-10 md:h-14">
                                 <Image src="/usericon.png" alt="color" width={50} height={50}  className='w-auto'/>
                             </div>
                             <div>
@@ -53,7 +53,7 @@ const Testimonial = () => {
                 </div>
               
             </div>
-        </div>
+        </motion.div>
     );
 };
 

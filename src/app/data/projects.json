@@ -1,41 +1,55 @@
 [
     {
+      "filter":"WebApp",
       "project_name": "MoneyRight",
       "category": "Finance Management",
       "link": "https://lighthearted-manatee-eed52a.netlify.app/",
       "image_name": "/moneyright.png"
-    },
+    },   
     {
+      "filter":"Website",
       "project_name": "Health Wealth",
       "category": "Ecommerce",
       "link": "https://boro.vercel.app/",
       "image_name": "/healthwealth.png"
     },
     {
+      "filter":"Website",
       "project_name": "EzRent",
       "category": "Ecommerce",
       "link": "https://ez-rent-website.vercel.app/",
       "image_name": "/ezrent.png"
     },
     {
+      "filter":"Website",
       "project_name": "ScanQuest",
       "category": "Educational Platform",
       "link": "https://d2dlibrary.com/",
       "image_name": "/scanquest.png"
     },
     {
+      "filter":"Website",
       "project_name": "Boxer",
       "category": "Promotional",
       "link": "https://boxer-iota.vercel.app/",
       "image_name": "/boxer.png"
     },
     {
+      "filter":"Website",
       "project_name": "Smart",
       "category": "Portfolio",
       "link": "https://smaart.vercel.app/",
       "image_name": "/smart.png"
     },
     {
+      "filter":"Website",
+      "project_name": "GenShare",
+      "category": "AI Image Generator",
+      "link": "https://creative-phoenix-ffb806.netlify.app/",
+      "image_name": "/genshare.png"
+    }
+   , {
+      "filter":"Website",
       "project_name": "GenShare",
       "category": "AI Image Generator",
       "link": "https://creative-phoenix-ffb806.netlify.app/",
