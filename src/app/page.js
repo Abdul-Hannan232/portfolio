@@ -1,3 +1,4 @@
+"use client"
 import HeroSection from "./component/heroSection"
 import Projects from "./component/projects";
 import Services from "./component/services";
@@ -13,7 +14,7 @@ export default function Home() {
       <Process/>
       <Projects />
       <Services />
-      <Testimonal />
+      <Testimonal  />
       <Contacts/> 
     </div>
   );

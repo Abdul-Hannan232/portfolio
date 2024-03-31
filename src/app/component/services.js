@@ -7,9 +7,9 @@ import { motion } from "framer-motion"
 
 const Services = () => {
     return (
-        <motion.div whileInView={{ y: 0 }} initial={{ y: 100 }} transition={{ delay: 0.2, duration: 1 }}  id="services" className='pt-10' >
-            <h1 className='md:text-5xl text-3xl font-bold text-center mt-44 mb-8'>Services</h1>
-            <div className='md:w-[800px]  md:mx-auto mx-5'>
+        <div   id="services" className='pt-5' >
+            <motion.h1 whileInView={{ y: 0 }} initial={{ y:100 }} transition={{ delay: 0.2, duration: 1 }}className='md:text-5xl text-3xl font-bold text-center mt-44 mb-8'>Services</motion.h1>
+            <motion.div whileInView={{ y: 0 }} initial={{ y:100 }} transition={{ delay: 0.2, duration: 1 }}className='md:w-[800px]  md:mx-auto mx-5'>
 
                 {service.map((item,index) => (
                     
@@ -30,9 +30,9 @@ const Services = () => {
                     </div>
                 )) }
 
-            </div>
+            </motion.div>
 
-        </motion.div>
+        </div>
     )
 }
 
