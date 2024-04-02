@@ -25,12 +25,12 @@ const HeroSection = () => {
 
 
 
-                    <p className='text-[13px]  md:w-[460px] tracking-wider text-[#787878] mt-4'>
+                    <p className='text-[13px]  md:w-[460px] tracking-wider text-[#787878] mt-4 text-justify'>
                         As a seasoned developer, I have worked with some of the larger ecommerce brands 
                         (CodiesHub, ScanQuest, GenShare) and trading platforms such as Monkey Monk and xadja.
                          Over the course of my career, I've contributed to <span className='font-bold'>46+ projects</span>. My expertise 
                          lies in creating web applications that not only meet but <span className='font-bold'>exceed business goals</span>,
-                          making a <span className='font-bold'>real impact</span>. :rocket:
+                          making a <span className='font-bold'>real impact</span>. 🚀
                     </p>
                     {/* <p className='text-[13px]  md:w-[460px] tracking-wider text-[#787878] mt-4'>A seasoned developer with a passion for creating innovative digital solutions.
                         Specializing in [Programming Languages  or  Technologies], I thrive on turning

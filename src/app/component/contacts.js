@@ -13,11 +13,17 @@ const Contacts = () => {
                     <p className='md:text-[12px] text-xs poppins-light my-1'>Feel free to adjust the wording to better fit<br/>
                         the tone and style of your website.</p>
                   <Link target="_blank" href="https://calendly.com/abdul-hannan-dev/60-minute-strategy-session?month=2024-03">
-                    <div className='bg-[#FFFFFF] rounded-xl md:w-36 w-24 p-3 mt-4 flex items-center gap-2'>
+                    <div className='bg-[#FFFFFF] rounded-xl md:w-36 w-24 p-3 mt-4 flex items-center gap-2 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300'>
                         <Image src="/icon.png" alt="icon" width={88} height={22}  className='w-auto'/>
                         <Image src="/exportblack.png" alt="icon" width={16} height={18} className='w-auto' />
                     </div>
                     </Link>
+                  {/* <Link target="_blank" href="https://calendly.com/abdul-hannan-dev/60-minute-strategy-session?month=2024-03">
+                    <div className='bg-[#FFFFFF] rounded-xl md:w-36 w-24 p-3 mt-4 flex items-center gap-2'>
+                        <Image src="/icon.png" alt="icon" width={88} height={22}  className='w-auto'/>
+                        <Image src="/exportblack.png" alt="icon" width={16} height={18} className='w-auto' />
+                    </div>
+                    </Link> */}
                 </div>  
                 <div className='text-center md:w-[350px] w-full bg-[#EDEDED] py-14 mt-2 rounded-2xl'>
                     <h1 className='text-[40px] poppins-bold'>Get in Touch</h1>
