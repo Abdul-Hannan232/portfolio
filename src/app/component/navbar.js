@@ -53,9 +53,9 @@ const Nav = () => {
             <div className='flex items-center justify-between gap-3'>
                 <div className='border-[#2D8CFF] bg-white w-full border-2 md:block hidden rounded-2xl py-4'>
                     <ul className='list-none poppins-semibold text-md px-10 flex items-center justify-between'>
-                        {navlinks.map(({ link, name }) => (
+                        {navlinks?.map(({ link, name }) => (
                             <div key={name}>
-                                
+
                                 <Link
                                     href={link}
                                     onClick={() => handleNavLinkClick(link)}
@@ -68,9 +68,10 @@ const Nav = () => {
                         ))}
                     </ul>
                 </div>
-                <button className='bg-[#2D8CFF] text-white md:block hidden poppins-semibold rounded-2xl text-center w-64 py-4 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300'>
-                    <Link href="#contact" >Contact</Link>
+                <Link href="#contact" >  <button className='bg-[#2D8CFF] text-white md:block hidden poppins-semibold rounded-2xl text-center w-64 py-4 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300'>
+                    Contact
                 </button>
+                </Link>
             </div>
 
             <div className='  w-full  mx-auto md:hidden block'>
@@ -95,9 +96,10 @@ const Nav = () => {
                             <DropdownItem className="text-center w-44 flex justify-center mx-auto border-b-[#EDEDED] border-2 py-3 border-transparent"><Link href="#services">Services</Link></DropdownItem>
                             <DropdownItem className="text-center w-44 flex justify-center mx-auto border-b-[#EDEDED] border-2 py-3 border-transparent"><Link href="#Testimonials">Testimonials</Link></DropdownItem>
                             <DropdownItem className="flex justify-center">
-                                <Button className='bg-[#2D8CFF] mt-5 mb-2 text-white rounded-xl w-24 mx-auto py-2'>
-                                    <Link href="#contact">Contact</Link>
+                                <Link href="#contact"> <Button className='bg-[#2D8CFF] mt-5 mb-2 text-white rounded-xl w-24 mx-auto py-2'>
+                                    Contact
                                 </Button>
+                                </Link>
                             </DropdownItem>
                         </DropdownMenu>
                     </Dropdown>

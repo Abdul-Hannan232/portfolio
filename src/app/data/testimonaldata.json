@@ -1,20 +1,75 @@
-[
-    {
-        "id":0,
-        "name":"John Smith ",
-        "state":"United States",
-        "para":"Working with Abdul Hannan was a game-changer for our project. Their expertise and dedication to excellence were evident from day one. Not only did they deliver top-notch solutions, but they also went above and beyond to ensure that our needs were met. Their professionalism and attention to detail are truly commendable.        "
-    },
-    {
-        "id":1,
-        "name":"Peter parker ",
-        "state":"Arab amirates",
-        "para":"Working with Abdul Hannan was a game-changer for our project. Their expertise and dedication to excellence were evident from day one. Not only did they deliver top-notch solutions, but they also went above and beyond to ensure that our needs were met. Their professionalism and attention to detail are truly commendable.        "
-    },
-    {
-        "id":2,
-        "name":"Danish Ali ",
-        "state":"Saudia Arabia",
-        "para":"Working with Abdul Hannan was a game-changer for our project. Their expertise and dedication to excellence were evident from day one. Not only did they deliver top-notch solutions, but they also went above and beyond to ensure that our needs were met. Their professionalism and attention to detail are truly commendable.        "
-    }
-]
+{"reviews": [ 
+      {
+        "client_name": "lancerap",
+        "country": "Canada",
+        "review": "I had an amazing experience working with Abdul Hannan. He helped me on my website and gave me great feedback on what needed to be fixed. His communication was amazing. He was reliable and delivered the project on time."
+      },
+      {
+        "client_name": "rtwheeler88",
+        "country": "South Africa",
+        "review": "Very knowledgeable with react and patient with client. Highly recommended"
+      },
+      {
+        "client_name": "Charles Goh",
+        "country": "Singapore",
+        "review": "Working with Hannan has been a breeze, and his ability to deliver top-notch solutions quickly sets him apart."
+      },
+      {
+        "client_name": "amitgarg398",
+        "country": "United States",
+        "review": "Excellent skills, good communication, extremely professional, very responsive. GREAT experience."
+      },
+      {
+        "client_name": "rtwheeler88",
+        "country": "South Africa",
+        "review": "Helpful and knowledgeable."
+      },
+      {
+        "client_name": "atherali3995",
+        "country": "United States",
+        "review": "Outstanding experience!"
+      },
+  {
+        "client_name": "Charles Goh",
+        "country": "Singapore",
+        "review": "Excellent communication"
+      },
+      {
+        "client_name": "Charles Goh",
+        "country": "Singapore",
+        "review": "Excellent work"
+      },
+      {
+        "client_name": "normandotlee",
+        "country": "Malaysia",
+        "review": "Always available for me to make any changes."
+      },
+      {
+        "client_name": "johnkellas",
+        "country": "United Kingdom",
+        "review": "Outstanding service. Really excellent. I am very impressed with the communication and quality of work. Highly recommended."
+      },
+      {
+        "client_name": "aaronkager",
+        "country": "United States",
+        "review": "He worked diligently to produce a great product and well before the expected deadline. Would recommend working with him in the future."
+      },
+      {
+        "client_name": "arya1233",
+        "country": "United States",
+        "review": "He has the best communication skills. He really understand your problem and try to come up with the best possible solution."
+      },
+  {
+        "client_name": "rluque",
+        "country": "United States",
+        "review": "Great communication with Abdul Hannan, he delivered what was promised. I would definitely work with him again. My project was rejected by several developers, but Abdul Hannan was able to perform the task with no issue."
+      },
+      {
+        "client_name": "fathelmohamud",
+        "country": "Canada",
+        "review": "Amazing quality of work. I was pleasantly surprised and amazed at the amazing work the team has done. I would highly recommend."
+      }
+    ]
+  }
+
+  
