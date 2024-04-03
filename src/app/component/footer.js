@@ -25,11 +25,11 @@ const Footer = () => {
             <div className='bg-black  md:flex md:gap-52 mx-auto   justify-center items-center  md:w-[800px] pt-16 pb-5  '>
                 <div className=' flex items-center py-5 justify-center  gap-2 text-xl'>
                     {/* <Image src="/fb.png" alt='facebook' width={30} height={30}/> */}
-                    <Link href="https://www.linkedin.com/in/abdul-hannan-developer">
+                    <Link target="_blank" href="https://www.linkedin.com/in/abdul-hannan-developer">
                         <Image src="/linkedin.png" alt='facebook' width={50} height={50} className='w-auto md:w-[30px] h-[30px]' />
 
                     </Link>
-                    <Link href="https://github.com/Abdul-Hannan232" >
+                    <Link target="_blank" href="https://github.com/Abdul-Hannan232" >
                         <Image src="/github.png" alt='facebook' width={50} height={50} className='w-auto md:w-[30px] h-[30px]' />
 
                     </Link>
