@@ -124,7 +124,7 @@ import Image from 'next/image';
 
 const Nav = () => {
     const [selectedSection, setSelectedSection] = useState('#');
-    const [toggle, setToggle] = useState('close');
+    const [toggle, setToggle] = useState('open');
     const [scrolled, setScrolled] = useState(false);
 
     const handleNavLinkClick = (link) => {
@@ -157,7 +157,7 @@ const Nav = () => {
     };
 
     const toClose = () => {
-        setToggle('close');
+        setToggle('open');
         
     };
     console.log(toggle)
