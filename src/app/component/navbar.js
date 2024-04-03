@@ -116,6 +116,7 @@
 
 // export default Nav
 
+
 "use client"
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -124,7 +125,7 @@ import Image from 'next/image';
 
 const Nav = () => {
     const [selectedSection, setSelectedSection] = useState('#');
-    const [toggle, setToggle] = useState('open');
+    const [toggle, setToggle] = useState(true);
     const [scrolled, setScrolled] = useState(false);
 
     const handleNavLinkClick = (link) => {
@@ -149,18 +150,17 @@ const Nav = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    
-    const toOpen = () => {
-        setToggle('open');
-        // setToggle(prevToggle => !prevToggle);
-       
-    };
 
-    const toClose = () => {
-        setToggle('open');
-        
-    };
+    // const toOpen = () => {
+    //     setToggle(true);
+    // };
+
+    // const toClose = () => {
+    //     setToggle(false);
+    // };
+
     console.log(toggle)
+
     return (
         <div className={`md:w-[800px] fixed top-0 right-0 left-0 z-40 px-3 rounded-b-2xl pb-3  mx-auto pt-10 ${scrolled ? 'bg-gray-900 shadow-xl px-3 rounded-b-2xl pb-3 pt-10 backdrop-blur-xl bg-white/30' : 'bg-transparent'}`}>
             <div className='flex items-center justify-between gap-3'>
@@ -184,31 +184,34 @@ const Nav = () => {
             </div>
 
             <div className='w-full mx-auto md:hidden block'>
-                <Image src="/popup.png" alt="popup" width={48} height={48} priority className='mx-auto cursor-pointer' onClick={toOpen} />
+                <Image src="/popup.png" alt="popup" width={48} height={48} priority className='mx-auto cursor-pointer' onClick={() => setToggle(prevToggle => !prevToggle)} />
             </div>
-            
-            {toggle==='open' && (
-                <div className='flex justify-center align-center '>
-                    <Dropdown className='relative text-center' >
+
+            {toggle === true && (
+                <div className='flex justify-center align-center'>
+                    <Dropdown className='relative text-center'>
                         <DropdownTrigger>
                             <Button variant="bordered">
                                 <div className='fixed top-10 right-0 left-0 mx-auto md:hidden block index-1'>
-                                    <Image src="/popup.png" alt="popup" width={48} height={48} className='mx-auto cursor-pointer' onClick={toOpen} />
+                                    <Image src="/popup.png" alt="popup" width={48} height={48} className='mx-auto cursor-pointer' onClick={() => setToggle(true)} />
                                 </div>
                             </Button>
                         </DropdownTrigger>
-                        <DropdownMenu aria-label="Main Menu" className='text-center bg-white w-52 mt-20 mx-auto shadow-xl rounded-2xl p-4' style={{boxShadow:' 0px 4px 30px 0px #00000040'}}>
-                            <DropdownItem textValue='open menue'  className='flex justify-end' >
-                                <Image src="/cross.png" alt="cross" width={20} height={20} className='float-right cursor-pointer mx-auto' onClick={toClose} />
+                        <DropdownMenu aria-label="Main Menu" className='text-center bg-white w-52 mt-20 mx-auto shadow-xl rounded-2xl p-4' style={{ boxShadow: ' 0px 4px 30px 0px #00000040' }}>
+                            <DropdownItem textValue='open menue' className='flex justify-end' >
+                                <Image src="/cross.png" alt="cross" width={20} height={20} className='float-right cursor-pointer mx-auto' onClick={() => {
+                                    setToggle(false)
+                                    setTimeout(() => {
+                                        setToggle(true)
+                                    }, 100);
+                                }} />
                             </DropdownItem>
                             {navlinks.map(({ link, name }) => (
                                 <DropdownItem textValue='open menue' key={name} className="text-center w-44 flex justify-center mx-auto border-b-[#EDEDED] border-2 py-3 border-transparent">
                                     <Link href={link} className='text-[#CACACA]'>{name}</Link>
                                 </DropdownItem>
                             ))}
-                           
-
-                            <DropdownItem textValue='open menue'  className="flex justify-center" >
+                            <DropdownItem textValue='open menue' className="flex justify-center" >
                                 <Link href="#contact">
                                     <Button className='bg-[#2D8CFF] mt-5 mb-2 text-white rounded-2xl w-[140px] mx-auto py-2'>Contact</Button>
                                 </Link>
