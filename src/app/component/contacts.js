@@ -66,39 +66,39 @@ const Contacts = () => {
     // SEND EMAIL
 
     try {
-      // // MAYONITY
-      // const response = await emailjs.sendForm(
-      //   "service_mlgfgrg",
-      //   "template_3kja57d",
-      //   form.current,
-      //   "I78ukZkWYYfkYNrn4",
-      //   { user_email: e.target.email.value }
-      // );
-      // //ABDUL_HANNAN
-      // const response2 = await emailjs.sendForm(
-      //   "service_1xr7bsc",
-      //   "template_g8de3qi",
-      //   form.current,
-      //   "VtHYwbCt_wamdCndZ",
-      //   { user_email: e.target.email.value }
-      // );
-
+      // MAYONITY
       const response = await emailjs.sendForm(
-        // RGM
-        "service_ybhaed4",
-        "template_ew6i8md",
+        "service_mlgfgrg",
+        "template_3kja57d",
         form.current,
-        "jiitdfNxo1h_xyJ_7",
+        "I78ukZkWYYfkYNrn4",
         { user_email: e.target.email.value }
       );
+      //ABDUL_HANNAN
       const response2 = await emailjs.sendForm(
-        //PZ
-        "service_ixn6ovf",
-        "template_rn69ki5",
+        "service_1xr7bsc",
+        "template_g8de3qi",
         form.current,
-        "B4iC9NOaloam9pD2t",
+        "VtHYwbCt_wamdCndZ",
         { user_email: e.target.email.value }
       );
+
+      // const response = await emailjs.sendForm(
+      //   // RGM
+      //   "service_ybhaed4",
+      //   "template_ew6i8md",
+      //   form.current,
+      //   "jiitdfNxo1h_xyJ_7",
+      //   { user_email: e.target.email.value }
+      // );
+      // const response2 = await emailjs.sendForm(
+      //   //PZ
+      //   "service_ixn6ovf",
+      //   "template_rn69ki5",
+      //   form.current,
+      //   "B4iC9NOaloam9pD2t",
+      //   { user_email: e.target.email.value }
+      // );
       setIsLoading(false);
       setIsModalOpen(true);
       console.log("Email 1 sent successfully:", response);
