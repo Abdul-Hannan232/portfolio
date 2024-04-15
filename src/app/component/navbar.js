@@ -65,7 +65,7 @@ const Nav = () => {
             </div>
 
             <div className='w-full mx-auto md:hidden block'>
-                <Image src="/popup.png" alt="popup" width={48} height={48} priority className='mx-auto cursor-pointer' onClick={() => setToggle(prevToggle => !prevToggle)} />
+                <Image src="/popup.png" alt="popup" width={48} height={48} priority className='mx-auto cursor-pointer ' onClick={() => setToggle(prevToggle => !prevToggle)} />
             </div>
 
             {toggle === true && (
@@ -74,13 +74,13 @@ const Nav = () => {
                         <DropdownTrigger>
                             <Button variant="bordered">
                                 <div className='fixed top-10 right-0 left-0 mx-auto md:hidden block index-1'>
-                                    <Image src="/popup.png" alt="popup" width={48} height={48} className='mx-auto cursor-pointer' onClick={() => setToggle(true)} />
+                                    <Image src="/popup.png" alt="popup" width={48} height={48} className='mx-auto cursor-pointer ' onClick={() => setToggle(true)} />
                                 </div>
                             </Button>
                         </DropdownTrigger>
-                        <DropdownMenu aria-label="Main Menu" className='text-center bg-white w-52 mt-20 mx-auto shadow-xl rounded-2xl p-4' style={{ boxShadow: ' 0px 4px 30px 0px #00000040' }}>
-                            <DropdownItem textValue='open menue' className='flex justify-end' >
-                                <Image src="/cross.png" alt="cross" width={20} height={20} className='float-right cursor-pointer mx-auto' onClick={() => {
+                        <DropdownMenu aria-label="Main Menu" className='text-center bg-white w-[230px]  mt-20 mx-auto shadow-xl rounded-2xl p-5  ' style={{ boxShadow: ' 0px 4px 30px 0px #00000040' }}>
+                            <DropdownItem textValue='open menue' className='flex justify-end -mt-2 ml-4' >
+                                <Image src="/cross.png" alt="cross" width={22} height={22} className='float-right cursor-pointer mx-auto  ' onClick={() => {
                                     setToggle(false)
                                     setTimeout(() => {
                                         setToggle(true)
@@ -88,8 +88,8 @@ const Nav = () => {
                                 }} />
                             </DropdownItem>
                             {navlinks.map(({ link, name }) => (
-                                <DropdownItem textValue='open menue' key={name} className="text-center w-44 flex justify-center mx-auto border-b-[#EDEDED] border-2 py-3 border-transparent">
-                                    <Link href={link} className='text-[#CACACA]'>{name}</Link>
+                                <DropdownItem textValue='open menue' key={name} className="text-center w-40 flex justify-center mx-auto border-b-[#EDEDED] border-b-2 py-3 font-bold text-lg ">
+                                    <Link href={link} className='text-[#CACACA] '>{name}</Link>
                                 </DropdownItem>
                             ))}
                             <DropdownItem textValue='open menue' className="flex justify-center" >

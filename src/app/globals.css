@@ -51,12 +51,34 @@ body {
   /* margin-top: 2px; */
   margin: auto;
 }
+
+/* .slick-list {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+} */
+
+/* .slick-prev {
+  left: initial !important;
+  margin-right: 50px;
+}
+
+.slick-next {
+  right: initial !important;
+  margin-left: 50px;
+} */
+
+.slick-track {
+  display: flex !important;
+  align-items: center !important;
+}
+
 @layer component {
-  .blackBox{
-    @apply bg-black rounded-xl md:w-[500px]  w-[80%] mx-auto md:p-5 p-4 cursor-pointer
+  .blackBox {
+    @apply bg-black rounded-xl md:w-[500px] w-[80%] mx-auto md:p-5 p-4 cursor-pointer
   }
 
-  .bluebox{
+  .bluebox {
     @apply bg-[#2D8CFF] rounded-xl md:w-[270px] md:mt-0 mt-5 w-[70%] mx-auto md:p-5 p-2 cursor-pointer
   }
 
