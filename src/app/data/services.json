@@ -1,0 +1,120 @@
+[
+    {
+        "id": 0,
+        "image": "/mern.png",
+        "maintech": "Mern Stack Development",
+        "tech": [
+            "MongoDB",
+            "Node.js",
+            "Stripe",
+            "Express.js",
+            "Typescript",
+            "REST APIs",
+            "React.js",
+            "Next.js"
+        ]
+    },
+    {
+        "id": 1,
+        "image": "/service2.png",
+        "maintech": "Pern Stack Development",
+        "tech": [
+            "React.js",
+            "Node.js",
+            "PostgreSQL",
+            "Typescript",
+            "Express.js",
+            "Next.js"
+        ]
+    },
+    {
+        "id": 2,
+        "image": "/service3.png",
+        "maintech": "JAM Stack Development",
+        "tech": [
+            "Next.js",
+            "FaunaDB",
+            "Strapi CMS",
+            "Gatsby.js",
+            "Contentful CMS",
+            "Ghost CMS  ",
+            "GraphQL",
+            "Sanity CMS",
+            "Typescript",
+            "Serverless Functions",
+            "Firebase"
+        ]
+    },
+    {
+        "id": 3,
+        "image": "/service4.png",
+        "maintech": "Frontend Development",
+        "tech": [
+            "HTML",
+            "ReactJs",
+            "Tailwind-css",
+            "CSS",
+            "GatsbyJs",
+            "Material-UI",
+            "Sass",
+            "Next.js",
+            "Bootstrap",
+            "Firebase",
+            "Vite",
+            "Figma",
+            "Canva"
+        ]
+    },
+    {
+        "id": 4,
+        "image": "/service5.png",
+        "maintech": "Ecommerce Development",
+        "tech": [
+            "React-Admin",
+            "Gatsby.js",
+            "CMS",
+            "React.js",
+            "Typescript",
+            "Next.js",
+            "Stripe"
+           
+        ]
+    },    {
+        "id": 5,
+        "image": "/service6.png",
+        "maintech": "OpenAI Integration",
+        "tech": [
+            "ChatGPT Integration",
+            "OpenAI API Integration"
+            
+        ]
+    },
+    {
+        "id": 6,
+        "image": "/service7.png",
+        "maintech": "Excel to Web Conversion",
+        "tech": [
+            "Excel",
+            "Typescript",
+            "Plotly",
+            "HTML",
+            "Charts",
+            "React-Admin",
+            "CSS",
+            "SanReact-Table",
+            "Javascript",
+            "Chart.js"
+        ]
+    },
+    {
+        "id": 7,
+        "image": "/service8.png",
+        "maintech": "Figma/ Adobe to Web",
+        "tech": [
+            "Figma",
+            "Adobe"
+            
+        ]
+    }
+   
+]
