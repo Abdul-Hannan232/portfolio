@@ -40,7 +40,7 @@ const Nav = () => {
     //     setToggle(false);
     // };
 
-    console.log(toggle)
+    // console.log(toggle)
 
     return (
         <div className={`md:w-[800px] fixed top-0 right-0 left-0 z-40 px-3 rounded-b-2xl pb-3  mx-auto pt-10 ${scrolled ? 'bg-gray-900 shadow-xl px-3 rounded-b-2xl pb-3 pt-10 backdrop-blur-xl bg-white/30' : 'bg-transparent'}`}>

@@ -62,7 +62,7 @@ const Projects = () => {
                             if (manageRow % 2 === 0) {
                                 if (index % 2 === 0) {
                                     manageRow = manageRow + 1;
-                                    console.log(index, 'index');
+                                    // console.log(index, 'index');
                                     return (
                                         <div key={index} className={`my-3 mx-auto relative md:ml-12 ${showAllItems || index  < displayCount ? '' : 'hidden'}`}>
                                             <Link target="_blank" href={ProjectData[index + 1].link} className="cursor-pointer ">
