@@ -10,14 +10,16 @@ const Nav = () => {
     const [scrolled, setScrolled] = useState(false);
 
 
-    const scrollToSection = () => {
-        if (selectedSection !== '#') {
-            const section = document.querySelector(selectedSection);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    };
+    // const scrollToSection = () => {
+    //     if (selectedSection !== '#') {
+    //         const section = document.querySelector(selectedSection);
+    //         if (section) {
+    //             section.scrollIntoView({ behavior: 'smooth' });
+    //         }
+    //     }
+    // };
+
+    
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -28,12 +30,39 @@ const Nav = () => {
         }
     }, []);
 
-
     const handleScroll = () => {
         const isScrolled = window.scrollY > 0;
         setScrolled(isScrolled);
+    
+        const sections = navlinks
+            .map(({ link }) => document.querySelector(link))
+            .filter(Boolean);
+    
+        const sectionInView = sections.find(section => {
+            const rect = section.getBoundingClientRect();
+            return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+        });
+    
+        if (sectionInView) {
+            const id = sectionInView.getAttribute('id');
+            const newSectionHash = `#${id}`;
+            setSelectedSection(newSectionHash);
+            
+            // Update URL hash 
+            if (window.location.hash !== newSectionHash) {
+                window.location.hash = newSectionHash;
+            }
+        } else {
+            // Default section
+            setSelectedSection('#contact');
+            if (window.location.hash !== '#contact') {
+                window.location.hash = '#contact';
+            }
+        }
     };
+    
 
+    
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', handleScroll);
@@ -52,11 +81,12 @@ const Nav = () => {
     };
 
     const navlinks = [
-        { name: 'Home', link: '#' },
+        { name: 'Home', link: '#home' },
         { name: 'Projects', link: '#projects' },
         { name: 'Services', link: '#services' },
         { name: 'Testimonials', link: '#testimonials' },
     ];
+
 
     return (
         <div className={`md:w-[800px] fixed top-0 right-0 left-0 z-40 px-3 rounded-b-2xl pb-3 mx-auto pt-10 ${scrolled ? 'bg-gray-900 shadow-xl px-3 rounded-b-2xl pb-3 pt-10 backdrop-blur-xl bg-white/30' : 'bg-transparent'}`}>
