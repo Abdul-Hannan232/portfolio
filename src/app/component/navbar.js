@@ -23,7 +23,7 @@ const Nav = () => {
     const handleNavLinkClick = (link) => {
         setSelectedSection(link);
         localStorage.setItem('selectedSection', link);
-        console.log(selectedSection, "hello");
+        // console.log(selectedSection, "hello");
     };
 
     const navlinks = [
