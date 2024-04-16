@@ -5,20 +5,20 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from '@
 import Image from 'next/image';
 
 const Nav = () => {
-    // const [selectedSection, setSelectedSection] = useState('#');
-    const [selectedSection, setSelectedSection] = useState(localStorage.getItem('selectedSection') || '#');
+    const [selectedSection, setSelectedSection] = useState('#');
+    // const [selectedSection, setSelectedSection] = useState(localStorage.getItem('selectedSection') || '#');
    
     const [toggle, setToggle] = useState(true);
     const [scrolled, setScrolled] = useState(false);
 
-    // useEffect(() => {
-    //     if (typeof window !== 'undefined') {
-    //         const savedSection = localStorage.getItem('selectedSection');
-    //         if (savedSection) {
-    //             setSelectedSection(savedSection);
-    //         }
-    //     }
-    // }, [])
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const savedSection = localStorage.getItem('selectedSection');
+            if (savedSection) {
+                setSelectedSection(savedSection);
+            }
+        }
+    }, [])
 
     const handleNavLinkClick = (link) => {
         setSelectedSection(link);
