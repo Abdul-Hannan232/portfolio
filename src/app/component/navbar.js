@@ -9,7 +9,7 @@ const Nav = () => {
     const [toggle, setToggle] = useState(true);
     const [scrolled, setScrolled] = useState(false);
 
-    // Function to scroll to the selected section
+
     const scrollToSection = () => {
         if (selectedSection !== '#') {
             const section = document.querySelector(selectedSection);
@@ -19,9 +19,7 @@ const Nav = () => {
         }
     };
 
-    // When the component mounts, handle the selected section and hash change events
     useEffect(() => {
-        // Only set selected section and handle hash changes if running on the client side
         if (typeof window !== 'undefined') {
             setSelectedSection(window.location.hash || '#');
             window.addEventListener('hashchange', () => {
@@ -30,13 +28,12 @@ const Nav = () => {
         }
     }, []);
 
-    // Handle scroll events
+
     const handleScroll = () => {
         const isScrolled = window.scrollY > 0;
         setScrolled(isScrolled);
     };
 
-    // Add event listener for scroll events
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', handleScroll);
@@ -46,10 +43,9 @@ const Nav = () => {
         }
     }, []);
 
-    // Handle navigation link clicks
+
     const handleNavLinkClick = (link) => {
         setSelectedSection(link);
-        // Update the URL hash to reflect the selected section
         if (typeof window !== 'undefined') {
             window.location.hash = link;
         }
