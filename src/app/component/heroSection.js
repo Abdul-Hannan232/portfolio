@@ -11,7 +11,7 @@ const HeroSection = () => {
             <div className='flex  lg:flex-row flex-col-reverse 	justify-around mx-20 items-center md:w-[800px] mx-auto'>
                 <div className='md:mx-0 mx-10 '>
                     {/* <h1 className='flex md:text-[32px] text-[20px] gap-2 poppins-bold text-[#CACACA] '>Hi<Image src="/hand-wave.png" alt="hand-wave" height={32} width={32} className='md:w-[40px] w-auto h-auto md:h-[40px] ' /></h1> */}
-                    <h1 className='flex md:text-[32px] text-[20px] gap-2 poppins-bold text-[#CACACA] '>Hi<Image src="/hand-wave.png" alt="hand-wave" height={32} width={32} className='md:w-[40px]  md:h-[40px] ' /></h1>
+                    <h1 className='flex items-center md:text-[32px] text-[20px] gap-2 poppins-bold text-[#CACACA] '>Hi<Image src="/hand-wave.png" alt="hand-wave" height={32} width={32} className='md:w-[40px]  md:h-[40px] ' /></h1>
                     <div className='flex items-center gap-3'>  <h1 className='md:text-[30px] text-[20px] poppins-bold text-[#CACACA]  '>I am</h1>
                         <Typewriter
                             options={{
