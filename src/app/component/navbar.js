@@ -34,31 +34,31 @@ const Nav = () => {
         const isScrolled = window.scrollY > 0;
         setScrolled(isScrolled);
     
-        const sections = navlinks
-            .map(({ link }) => document.querySelector(link))
-            .filter(Boolean);
+        // const sections = navlinks
+        //     .map(({ link }) => document.querySelector(link))
+        //     .filter(Boolean);
     
-        const sectionInView = sections.find(section => {
-            const rect = section.getBoundingClientRect();
-            return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
-        });
+        // const sectionInView = sections.find(section => {
+        //     const rect = section.getBoundingClientRect();
+        //     return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+        // });
     
-        if (sectionInView) {
-            const id = sectionInView.getAttribute('id');
-            const newSectionHash = `#${id}`;
-            setSelectedSection(newSectionHash);
+        // if (sectionInView) {
+        //     const id = sectionInView.getAttribute('id');
+        //     const newSectionHash = `#${id}`;
+        //     setSelectedSection(newSectionHash);
             
-            // Update URL hash 
-            if (window.location.hash !== newSectionHash) {
-                window.location.hash = newSectionHash;
-            }
-        } else {
-            // Default section
-            setSelectedSection('#contact');
-            if (window.location.hash !== '#contact') {
-                window.location.hash = '#contact';
-            }
-        }
+        //     // Update URL hash 
+        //     if (window.location.hash !== newSectionHash) {
+        //         window.location.hash = newSectionHash;
+        //     }
+        // } else {
+        //     // Default section
+        //     setSelectedSection('#contact');
+        //     if (window.location.hash !== '#contact') {
+        //         window.location.hash = '#contact';
+        //     }
+        // }
     };
     
 
