@@ -5,12 +5,24 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from '@
 import Image from 'next/image';
 
 const Nav = () => {
-    const [selectedSection, setSelectedSection] = useState('#');
+    // const [selectedSection, setSelectedSection] = useState('#');
+    const [selectedSection, setSelectedSection] = useState(localStorage.getItem('selectedSection') || '#');
+   
     const [toggle, setToggle] = useState(true);
     const [scrolled, setScrolled] = useState(false);
 
+    // useEffect(() => {
+    //     if (typeof window !== 'undefined') {
+    //         const savedSection = localStorage.getItem('selectedSection');
+    //         if (savedSection) {
+    //             setSelectedSection(savedSection);
+    //         }
+    //     }
+    // }, [])
+
     const handleNavLinkClick = (link) => {
         setSelectedSection(link);
+        localStorage.setItem('selectedSection', link);
         console.log(selectedSection, "hello");
     };
 
@@ -31,6 +43,19 @@ const Nav = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
+    useEffect(() => {
+        // Restore scroll position when the page is loaded
+        const scrollToSection = () => {
+            if (selectedSection !== '#') {
+                const section = document.querySelector(selectedSection);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        };
+        scrollToSection();
+    }, [selectedSection]);
 
     // const toOpen = () => {
     //     setToggle(true);
@@ -60,7 +85,7 @@ const Nav = () => {
                     </ul>
                 </div>
                 <Link href="#contact">
-                    <button className='bg-[#2D8CFF] text-white md:block hidden poppins-semibold rounded-2xl text-center w-64 py-4 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300'>Contact</button>
+                    <button onClick={()=>handleNavLinkClick("#contact")} className='bg-[#2D8CFF] text-white md:block hidden poppins-semibold rounded-2xl text-center w-64 py-4 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300'>Contact</button>
                 </Link>
             </div>
 
