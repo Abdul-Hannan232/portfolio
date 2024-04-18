@@ -7,7 +7,8 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import { motion } from "framer-motion"
 const HeroSection = () => {
     return (
-        <div className='2xl:mt-64 md:mt-44 mt-32' id="home">
+        <section className='2xl:mt-64 md:mt-44 mt-32' id="home">
+            
             <div className='flex  lg:flex-row flex-col-reverse 	justify-around mx-20 items-center md:w-[800px] mx-auto'>
                 <div className='md:mx-0 mx-10 '>
                     {/* <h1 className='flex md:text-[32px] text-[20px] gap-2 poppins-bold text-[#CACACA] '>Hi<Image src="/hand-wave.png" alt="hand-wave" height={32} width={32} className='md:w-[40px] w-auto h-auto md:h-[40px] ' /></h1> */}
@@ -49,7 +50,7 @@ const HeroSection = () => {
                     <Image src="/user.png" alt="user" width={372} height={472} className=' mx-auto md:w-[422px] lg:h-[350px] ' />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -4,12 +4,40 @@ import Link from 'next/link';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from '@nextui-org/react';
 import Image from 'next/image';
 
-const Nav = () => {
-    const [selectedSection, setSelectedSection] = useState('#');
+const Nav = ({ navlinks ,setNavLinks , selectedSection}) => {
+    console.log(selectedSection , "section");
+    // const [selectedSection, setSelectedSection] = useState('#');
     const [toggle, setToggle] = useState(true);
     const [scrolled, setScrolled] = useState(false);
+    // const [selectedSection, setSelectedSection] = useState(null);
 
-
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const scrollPosition = window.scrollY;
+    //         const sections = document.querySelectorAll("section[id]");
+    
+    //         sections.forEach((section) => {
+    //             console.log("Section Element:", section); // Log the section element
+    //             console.log("Section ID:", section.id); // Log the section ID
+    //             const sectionTop = section.offsetTop;
+    //             const sectionHeight = section.clientHeight;
+    //             if (
+    //                 scrollPosition >= sectionTop &&
+    //                 scrollPosition < sectionTop + sectionHeight
+    //             ) {
+    //                 setSelectedSection(section.id);
+    //             }
+    //         });
+    //     };
+    
+    //     window.addEventListener("scroll", handleScroll);
+    
+    //     // Clean up event listener
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
+    
     // const scrollToSection = () => {
     //     if (selectedSection !== '#') {
     //         const section = document.querySelector(selectedSection);
@@ -19,35 +47,35 @@ const Nav = () => {
     //     }
     // };
 
-    
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setSelectedSection(window.location.hash || '#');
-            window.addEventListener('hashchange', () => {
-                setSelectedSection(window.location.hash || '#');
-            });
-        }
-    }, []);
+
+    // useEffect(() => {
+    //     if (typeof window !== 'undefined') {
+    //         setSelectedSection(window.location.hash || '#');
+    //         window.addEventListener('hashchange', () => {
+    //             setSelectedSection(window.location.hash || '#');
+    //         });
+    //     }
+    // }, []);
 
     const handleScroll = () => {
         const isScrolled = window.scrollY > 0;
         setScrolled(isScrolled);
-    
+
         // const sections = navlinks
         //     .map(({ link }) => document.querySelector(link))
         //     .filter(Boolean);
-    
+
         // const sectionInView = sections.find(section => {
         //     const rect = section.getBoundingClientRect();
         //     return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
         // });
-    
+
         // if (sectionInView) {
         //     const id = sectionInView.getAttribute('id');
         //     const newSectionHash = `#${id}`;
         //     setSelectedSection(newSectionHash);
-            
+
         //     // Update URL hash 
         //     if (window.location.hash !== newSectionHash) {
         //         window.location.hash = newSectionHash;
@@ -60,9 +88,9 @@ const Nav = () => {
         //     }
         // }
     };
-    
 
-    
+
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', handleScroll);
@@ -72,33 +100,34 @@ const Nav = () => {
         }
     }, []);
 
+    // const handleNavLinkClick = (link) => {
+    //     console.log("NavLink clicked"); // Debugging
+    //     setSelectedSection(link);
+    //     if (typeof window !== 'undefined') {
+    //         window.location.hash = link;
+    //     }
+    // };
 
-    const handleNavLinkClick = (link) => {
-        setSelectedSection(link);
-        if (typeof window !== 'undefined') {
-            window.location.hash = link;
-        }
-    };
-
-    const navlinks = [
-        { name: 'Home', link: '#home' },
-        { name: 'Projects', link: '#projects' },
-        { name: 'Services', link: '#services' },
-        { name: 'Testimonials', link: '#testimonials' },
-    ];
-
-
+ console.log(selectedSection , " seclected");
+  
     return (
         <div className={`md:w-[800px] fixed top-0 right-0 left-0 z-40 px-3 rounded-b-2xl pb-3 mx-auto pt-10 ${scrolled ? 'bg-gray-900 shadow-xl px-3 rounded-b-2xl pb-3 pt-10 backdrop-blur-xl bg-white/30' : 'bg-transparent'}`}>
             <div className='flex items-center justify-between gap-3'>
                 <div className='border-[#2D8CFF] bg-white w-full border-2 md:block hidden rounded-2xl py-4'>
                     <ul className='list-none poppins-semibold text-md px-10 flex items-center justify-between'>
-                        {navlinks.map(({ link, name }) => (
+                        {navlinks.map(({ link, name , id }) => (
                             <li key={name}>
-                                <Link href={link}>
-                                    <div className={`relative lg:block hidden hover:text-black text-[#CACACA] poppins-semibold ${selectedSection === link ? 'text-black' : ''}`} onClick={() => handleNavLinkClick(link)}>
+                                <Link  href={link}>
+                                    <div
+                                  
+                                        className={`relative lg:block hidden hover:text-black text-[#CACACA] poppins-semibold ${selectedSection === link.slice(1) ? "text-black  " : ""
+                                            }`}
+                                    >
                                         {name}
-                                        {selectedSection === link && <div className="absolute inset-x-0 hover" />}
+                                        {selectedSection === link.slice(1) && (
+                                            <div className="absolute inset-x-0 hover" />
+                                        )}
+                                        {console.log("link" , link.slice(1))}
                                     </div>
                                 </Link>
                             </li>
@@ -106,7 +135,8 @@ const Nav = () => {
                     </ul>
                 </div>
                 <Link href="#contact">
-                    <button  onClick={()=>handleNavLinkClick("#contact")} className='bg-[#2D8CFF] text-white md:block hidden poppins-semibold rounded-2xl text-center w-64 py-4 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300'>Contact</button>
+                    <button  className='bg-[#2D8CFF] text-white md:block hidden poppins-semibold rounded-2xl text-center w-64 py-4 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300'>Contact</button>
+                    {/* <button onClick={() => handleNavLinkClick("#contact")} className='bg-[#2D8CFF] text-white md:block hidden poppins-semibold rounded-2xl text-center w-64 py-4 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-black hover:text-white duration-300'>Contact</button> */}
                 </Link>
             </div>
 
@@ -135,7 +165,7 @@ const Nav = () => {
                             ))}
                             <DropdownItem textValue='open menu' className="flex justify-center">
                                 <Link href="#contact">
-                                    <Button  onClick={()=>handleNavLinkClick("#contact")} className='bg-[#2D8CFF] mt-5 mb-2 text-white rounded-2xl w-[140px] mx-auto py-2'>Contact</Button>
+                                    <Button onClick={() => handleNavLinkClick("#contact")} className='bg-[#2D8CFF] mt-5 mb-2 text-white rounded-2xl w-[140px] mx-auto py-2'>Contact</Button>
                                 </Link>
                             </DropdownItem>
                         </DropdownMenu>

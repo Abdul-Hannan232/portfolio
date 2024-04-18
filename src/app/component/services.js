@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 const Services = () => {
     return (
-        <div   id="services" className='pt-5' >
+        <section  id="services" className='pt-5' >
             <motion.h1 whileInView={{ y: 0 }} initial={{ y:100 }} transition={{ delay: 0.2, duration: 1 }}className='md:text-5xl text-3xl font-bold text-center mt-44 mb-8'>Services</motion.h1>
             <motion.div whileInView={{ y: 0 }} initial={{ y:100 }} transition={{ delay: 0.2, duration: 1 }}className='md:w-[800px]  md:mx-auto mx-5'>
 
@@ -32,7 +32,7 @@ const Services = () => {
 
             </motion.div>
 
-        </div>
+        </section>
     )
 }
 

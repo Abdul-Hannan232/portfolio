@@ -32,7 +32,7 @@ const Projects = () => {
     };
 
     return (
-        <div  id="projects" className="pt-5">
+        <section  id="projects" className="pt-5">
             <motion.h1 whileInView={{ y: 0 }} initial={{ y:100 }} transition={{ delay: 0.2, duration: 1 }} className="md:text-5xl text-3xl font-bold text-center mt-44 mb-8">Projects</motion.h1>
             {/* <motion.div whileInView={{ y: 0 }} initial={{ y:100 }} transition={{ delay: 0.2, duration: 1 }}className="bg-[#000000] text-white flex items-center font-semibold cursor-pointer justify-between rounded-xl p-2 w-[250px] md:w-[530px] mx-auto">
             {CategoryData.map((item,index)=>(
@@ -139,7 +139,7 @@ const Projects = () => {
                     </motion.div>
                 )}
             </div>
-        </div>
+        </section>
     );
 };
 

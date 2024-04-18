@@ -69,7 +69,8 @@ const Testimonial = () => {
     return (
 
         // <motion.div whileInView={{ y: 0 }} initial={{ y: 100 }} transition={{ delay: 0.2, duration: 1 }} className="md:w-[500px] md:mx-auto mx-14 pt-72" id="Testimonials"  >
-        <motion.div whileInView={{ y: 0 }} initial={{ y: 100 }} transition={{ delay: 0.2, duration: 1 }} className="md:w-[500px] md:mx-auto mx-14 pt-16" id="testimonials"  >
+        <section id="testimonials">
+            <motion.div whileInView={{ y: 0 }} initial={{ y: 100 }} transition={{ delay: 0.2, duration: 1 }} className="md:w-[500px] md:mx-auto mx-14 pt-16" id="testimonials"  >
             <motion.h1 whileInView={{ y: 0 }} initial={{ y: 100 }} transition={{ delay: 0.2, duration: 1 }} className="md:text-5xl text-3xl poppins-bold text-center mb-8">Testimonials</motion.h1>
             <div className='relative'>
                 <Slider ref={sliderRef} {...settings}>
@@ -111,6 +112,7 @@ const Testimonial = () => {
                 </div>
             </div>
         </motion.div>
+        </section>
     );
 };
 
