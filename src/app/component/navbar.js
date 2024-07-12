@@ -104,7 +104,7 @@ const Nav = ({ navlinks, setNavLinks }) => {
             <div className='w-full mx-auto md:hidden block'>
                 <Image src="/popup.png" alt="popup" width={48} height={48} priority className='mx-auto cursor-pointer' onClick={() => setToggle(prevToggle => !prevToggle)} />
             </div>
-            {toggle === true  && (
+            {toggle  && (
                 <div className='flex justify-center align-center'>
                     <Dropdown className='relative text-center'>
                         <DropdownTrigger>
